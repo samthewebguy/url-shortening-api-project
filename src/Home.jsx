@@ -7,6 +7,7 @@ import BgBoostImage from './assets/bg-boost-desktop.svg'
 import BgBoostMobileImage from './assets/bg-boost-mobile.svg'
 import Header from './Component/Header/Header'
 import Footer from './Component/Footer'
+import Shortener from './Component/Shortener'
 
 const Home = () => {
   return (
@@ -22,13 +23,16 @@ const Home = () => {
             <img className='w-full md:max-w-[600px]' src={DesktopImage} alt="" />
         </div>
       </div>
+      <Shortener/>
       <section className='bg-[#f0f1f6] flex flex-col items-center justify-center py-16 md:px-24 px-8'>
         <div className='flex flex-col text-center gap-4'>
           <h2 className='text-3xl font-bold'>Advanced Statistics</h2>
           <p className='text-md font-normal text-gray-400'>Track how your links are performing across the web with our advanced statistics dashboard</p>
         </div>
-        <div className='relative grid grid-cols-1 md:grid-cols-3 mt-16 md:mt-10 gap-[48px] md:gap-[24px] items-center justify-center'>
-          <div className='flex flex-col relative w-[100%] max-w-[100%] md:max-w-[400px] bg-white gap-2 p-[24px] rounded-[8px]'>
+        <div className='relative grid grid-cols-1 md:grid-cols-3 mt-16 md:mt-10 gap-[48px] md:gap-[24px] items-center justify-center text-center md:text-left'>
+          <div className='hidden md:flex absolute top-[50%] right-[0] left-[0] line h-1 bg-[#2acfcf] w-full'></div>
+          <div className='flex md:hidden absolute left-[50%] top-[0] bottom-[0] line h-full bg-[#2acfcf] w-1'></div>
+          <div className='relative flex flex-col w-[100%] max-w-[100%] md:max-w-[400px] bg-white gap-2 p-[24px] rounded-[8px] items-center md:items-start'>
             <div className='absolute top-[-20px]  bg-[#3b3054] w-fit p-4 rounded-[100%]'>
               <img className='w-[24px]' src={BrandRecognitionIcon} alt="" />
             </div>
@@ -37,7 +41,7 @@ const Home = () => {
               <p className='text-sm font-normal text-gray-400'>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help install confidence in your content.</p>
             </div>
           </div>
-          <div className='relative w-[100%] max-w-[100%] md:max-w-[400px] bg-white flex flex-col gap-2 p-[24px] rounded-[8px] md:mt-10'>
+          <div className='relative w-[100%] max-w-[100%] md:max-w-[400px] bg-white flex flex-col gap-2 p-[24px] rounded-[8px] md:mt-10 items-center md:items-start'>
             <div className='absolute top-[-20px] bg-[#3b3054] w-fit p-4 rounded-[100%]'>
               <img className='w-[24px]' src={DetailedRecordsIcon} alt="" />
             </div>
@@ -46,7 +50,7 @@ const Home = () => {
               <p className='text-sm font-normal text-gray-400'>Gain insights into who is clicking  your links. Knowing when and where people engage with your content helps inform better decisions</p>
             </div>
           </div>
-          <div className='relative w-[100%] max-w-[100%] md:max-w-[400px] bg-white flex flex-col gap-2 p-[24px] rounded-[8px] md:mt-20'>
+          <div className='relative w-[100%] max-w-[100%] md:max-w-[400px] bg-white flex flex-col gap-2 p-[24px] rounded-[8px] md:mt-20 items-center md:items-start'>
             <div className='absolute top-[-20px]  bg-[#3b3054] w-fit p-4 rounded-[100%]'>
               <img className='w-[24px]' src={FullyCustomizableIcon} alt="" />
             </div>
